@@ -1,0 +1,6 @@
+pandas
+sklearn
+networkx
+community
+matplotlib
+scipy
