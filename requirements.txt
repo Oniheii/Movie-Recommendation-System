@@ -4,3 +4,4 @@ networkx
 community
 matplotlib
 scipy
+PIL
