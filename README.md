@@ -1,14 +1,48 @@
-# projet-datamining-recommandation-de-films-
-Ce projet s'inscrit dans le cadre du cours de Data Mining avancée II du Master 2 ES dispensé à l'ISFA par Nassira Chekkai. Le projet vise à analyser les avis des utilisateurs sur des films à partir du jeu de données "ratings.csv". L'objectif générale est de créer un système de recommandation de films en utilisant les techniques de similarité entre utilisateurs basées sur les évaluations. Plus spécifiquement, il s'agit de :
+# Movie Recommendation System Using User Similarity
 
-    - Importer le fichier "ratings.csv" contenant les avis des utilisateurs sur les films.
-    - Prétraiter les données pour les rendre appropriées à l'analyse.
-    - Construire un graphe de similarité entre les utilisateurs à l'aide des techniques de similarité (cosinus, Jaccard, Pearson).
-    - Évaluer les performances du système de recommandation en mesurant la précision et la pertinence des recommandations.
-    - Utiliser le graphe pour explorer les relations entre utilisateurs et détecter les communautés.
+This repository contains a project focused on building a **movie recommendation system** using user similarity techniques based on user ratings. The goal is to create personalized movie suggestions by analyzing user preferences and detecting communities of similar users.
 
-Ce projet démontre l'application pratique des techniques de similarité et de recommandation pour analyser les avis des utilisateurs sur les films. Il met en évidence la valeur de l'analyse des données pour fournir des recommandations personnalisées, ce qui peut être appliqué dans divers domaines tels que l'industrie du divertissement, le commerce électronique et la personnalisation des services.
+### Project Overview
 
-Le de jeu de données utilisé dans ce projet est issue des jeux de données GroupLens  <a href='https://www.kaggle.com/datasets/shubhammehta21/movie-lens-small-latest-dataset' target='_blank'>Kaggle : Movie Lens Small Latest Dataset</a> de la plateforme Kaggle et décrit l'activité d'évaluation 5 étoiles et de marquage en texte libre de MovieLens, un service de recommandation de films. Il contient 100836 évaluations et 3683 applications de tags sur 9742 films. Ces données ont été créées par 610 utilisateurs entre le 29 mars 1996 et le 24 septembre 2018. Cet ensemble de données a été généré le 26 septembre 2018. Les utilisateurs ont été sélectionnés au hasard. Tous les utilisateurs sélectionnés ont évalué au moins 20 films. Aucune information démographique n'est incluse. Chaque utilisateur est représenté par un identifiant et aucune autre information n'est fournie. 
+The recommendation system leverages a **collaborative filtering** approach by computing user-user similarity through techniques such as:
+- **Cosine Similarity**
+- **Jaccard Index**
+- **Pearson Correlation**
 
+By building a **similarity graph** between users, the system is able to recommend movies based on the preferences of similar users, while also exploring the **community structure** of users.
 
+### Data
+
+The dataset used in this project comes from the **<a href='https://www.kaggle.com/datasets/shubhammehta21/movie-lens-small-latest-dataset' target='_blank'>Kaggle : Movie Lens Small Latest Dataset</a>**, available on Kaggle. It contains:
+- **100,836 ratings** from **610 users** across **9,742 movies**.
+- Each user has rated at least 20 movies, and no demographic information is included.
+
+The data spans from **March 29, 1996**, to **September 24, 2018**, and provides both star ratings and free-text tags applied to movies.
+
+### Key Components
+
+1. **Data Preprocessing**: Cleaning and formatting the `ratings.csv` file to ensure it's suitable for similarity analysis.
+2. **Similarity Calculation**: Using cosine, Jaccard, and Pearson methods to calculate similarities between users based on their movie ratings.
+3. **Graph-Based Analysis**: Building a similarity graph with **Gephi** to visualize relationships between users and detect communities.
+4. **Recommendation System**: Generating movie recommendations by leveraging the user similarity scores.
+5. **Evaluation**: Assessing the system's performance by measuring the **accuracy** and **relevance** of the recommendations.
+
+### Tools and Libraries
+- **Python**: Used for data preprocessing and recommendation system implementation.
+- **Gephi**: For visualizing the similarity graph and detecting user communities.
+- **Pandas, Numpy, Scikit-learn**: Essential libraries for data manipulation and model implementation.
+
+### Results and Insights
+
+The project successfully demonstrates the power of **similarity-based recommendations** by providing personalized movie suggestions. In addition, the analysis of user relationships via graph structures offers insights into how communities of similar users interact and share preferences.
+
+### Next Steps
+- Enhance the model by incorporating other types of recommendation techniques such as **Matrix Factorization**.
+- Expand the dataset to test on larger-scale movie databases.
+- Improve the recommendation accuracy by integrating more complex evaluation metrics.
+
+### How to Run
+
+1. Clone the repository.
+2. Install the required libraries using `requirements.txt`.
+3. Run the Jupyter Notebook `recommendation_system.ipynb` to execute the code.
