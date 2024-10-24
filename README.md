@@ -46,3 +46,10 @@ The project successfully demonstrates the power of **similarity-based recommenda
 1. Clone the repository.
 2. Install the required libraries using `requirements.txt`.
 3. Run the Jupyter Notebook `recommendation_system.ipynb` to execute the code.
+
+4. ### File Structure
+
+- `data/`: Contains the raw dataset (`ratings.csv`).
+- `scripts/`: Python code for building the recommendation system.
+- `output/`: Contains the results of the similarity calculations and graph visualizations.
+- `requirements.txt`: List of dependencies.
